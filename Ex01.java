@@ -1,17 +1,15 @@
-public class Main {
+import java.util.Arrays;
+import java.util.LinkedList;
+
+/*
+Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.
+Постараться не обращаться к листу по индексам.
+ */
+
+public class Ex01 {
     public static void main(String[] args) {
         LinkedList<Integer> ls = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5));
         System.out.println(reverse(ls));
-        ex1();
-    }
-
-
-    static void ex1() {
-        /*
-        Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.
-        Постараться не обращаться к листу по индексам.
-         */
-
     }
 
     public static LinkedList<Integer> reverse(LinkedList<Integer> ls) {
@@ -20,7 +18,5 @@ public class Main {
             rev_ls.add(ls.get(i));
         }
         return rev_ls;
-
-
     }
 }
