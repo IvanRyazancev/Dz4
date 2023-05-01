@@ -9,6 +9,7 @@ import java.util.LinkedList;
 public class Ex01 {
     public static void main(String[] args) {
         LinkedList<Integer> ls = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5));
+        System.out.println(ls);
         System.out.println(reverse(ls));
     }
 
