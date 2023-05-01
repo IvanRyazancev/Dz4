@@ -1,24 +1,29 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-
+import java.util.*;
 
 public class Ex03 {
     public static void main(String[] args) {
         /*
         Найдите сумму всех элементов LinkedList, сохраняя все элементы в списке. Используйте итератор
          */
-        LinkedList<Integer> ls = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5));
-        summList(ls);
+        Scanner num = new Scanner(System.in);
+        System.out.println("Введите кол-во элементов: ");
+        int quantity = num.nextInt();
+        int sum = 0;
+        sumLs(quantity, sum);
     }
-
-    public static void summList(LinkedList<Integer> ls) {
-        Integer summ = 0;
-        for (int i = 0; i < ls.size(); i++) {
-            summ = summ + ls.get(i);
+    public static void sumLs(int quantity, int sum){
+        Random rndGen = new Random();
+        LinkedList<Integer> ls = new LinkedList<>();
+        for (int i = 0; i < quantity; i++) {
+            ls.add(rndGen.nextInt(1,100));
         }
-        System.out.println("Сумма элементов списка: " + summ);
+        Iterator<Integer> iterator = ls.iterator();
+        while(iterator.hasNext()) {
+            sum += iterator.next();
+        }
+        System.out.println("Список элементов: " + ls);
+        System.out.println("Сумма элементов списка: " + sum);
     }
 }
-
 
 
